@@ -16,6 +16,8 @@ class SearchResultCollectionViewCell: UICollectionViewCell {
     let madeLabel: UILabel = UILabel()
     let priceLabel: UILabel = UILabel()
     
+    
+    // MARK: - UI 전달 함수
     func setupCell() {
         setupLayout()
         
@@ -25,6 +27,8 @@ class SearchResultCollectionViewCell: UICollectionViewCell {
         priceLabel.text = "15,000원"
     }
     
+    
+    // MARK: - 오토레이아웃 추가
     func setupLayout() {
         [bookImage, titleLabel, madeLabel, priceLabel].forEach{ addSubview($0) }
         
