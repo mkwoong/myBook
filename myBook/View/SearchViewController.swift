@@ -65,6 +65,7 @@ class SearchViewController: UIViewController {
     // MARK: - 디자인..?
     func configure() {
         titleLabel.text = "Search Book"
+        titleLabel.font = .boldSystemFont(ofSize: 25)
         
         searchBar.barTintColor = UIColor(named: "mYellow")
         searchBar.searchBarStyle = .minimal
@@ -87,7 +88,7 @@ extension SearchViewController: UICollectionViewDataSource, UICollectionViewDele
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SearchResultCollectionViewCell.identifier, for: indexPath) as? SearchResultCollectionViewCell else {return UICollectionViewCell()}
         
-        cell.backgroundColor = .white
+        cell.backgroundColor = .lightText
         cell.setupCell()
         
         return cell

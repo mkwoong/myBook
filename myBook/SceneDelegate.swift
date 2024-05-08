@@ -23,8 +23,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         firstVC.tabBarItem = UITabBarItem(title: "검색", image: UIImage(systemName: "magnifyingglass"), tag: 0)
         secondVC.tabBarItem = UITabBarItem(title: "나의 책", image: UIImage(systemName: "book.closed.fill"), tag: 1)
-        tabBar.tabBar.backgroundColor = .systemGray6
         tabBar.tabBar.tintColor = UIColor(named: "mPurple")
+        tabBar.tabBar.backgroundColor = .mYellow
         
         window = UIWindow(windowScene: windowScene)
         window?.rootViewController = tabBar

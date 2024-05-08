@@ -32,6 +32,7 @@ class DetailViewController: UIViewController {
         detailLabel.text = "책 설명 책 설명 책 설명 책 설명 책 설명 책 설명 책 설명 책 설명 책 설명 책 설명 책 설명 책 설명 책 설명 책 설명 책 설명 책 설명 책 설명 책 설명 책 설명 책 설명 책 설명 책 설명 책 설명 책 설명 책 설명"
         priceLabel.text = "가격"
         
+        cancelButton.addTarget(self, action: #selector(buttonTap), for: .touchUpInside)
         cancelButton.frame.size = CGSize(width: 70, height: 70)
         cancelButton.setTitle("취소", for: .normal)
         cancelButton.layer.cornerRadius = 5
@@ -95,7 +96,9 @@ class DetailViewController: UIViewController {
         }
     }
     
-    
+    @objc func buttonTap(_ button: UIButton) {
+        dismiss(animated: true)
+    }
     
 
     override func viewDidLoad() {
